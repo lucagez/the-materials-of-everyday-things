@@ -1,0 +1,157 @@
+html, body {
+  width: 100%;
+  margin: 0;
+}
+
+button#deeper {
+  position: fixed;
+  bottom: 40px;
+  line-height: 35px;
+  cursor: pointer;
+  transition: border-radius 1s, width 1s, height 1s;
+}
+
+button#deeper div {
+  opacity: 1;
+  text-transform: none;
+  animation: fadeIn 1.5s ease-in-out; 
+}
+
+.pulse {
+  animation: pulse 5.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.pulse:hover {
+  animation: none;
+}
+
+.pulse:active {
+  animation: pulse 5.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.horizontalCenter {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.grid-1, .introGrid, .askGrid {
+  display: grid;
+  grid-template-columns: auto 740px auto;
+  grid-template-rows: 150px 200px auto;
+  grid-template-areas:
+    ". . ."
+    ". main ."
+    ". . .";
+}
+
+.askGrid {
+  grid-template-rows: auto auto auto;
+}
+
+.ask {
+  grid-area: main;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.introGrid {
+  grid-template-rows: 400px auto auto;
+}
+
+.article {
+  grid-area: main;
+}
+
+.car {
+  /* grid-area: car; */
+  position: fixed;
+  top: 30%;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  overflow: hidden;
+  min-width: 500px;
+  height: 500px;
+  transition: left 1s, top 1s, transform 1s;
+}
+
+.macro {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.carHidden {
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  display: none;
+}
+
+.title {
+  grid-area: main;
+  padding: 0;
+}
+
+.title h1, .title p {
+  text-align: center;
+}
+
+.explain {
+  position: absolute;
+  z-index: 999;
+  padding: 20px;
+  max-width: 200px;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: appearFromLeft 1s ease-out;
+}
+
+
+.shadow {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.radius {
+  border-radius: 7px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95) translateX(-50%);
+    box-shadow: 0 0 0 0px rgba(87, 173, 104, 1);
+  }
+  70% {
+    transform: scale(1) translateX(-50%);
+    box-shadow: 20px 20px 0 0 rgba(87, 173, 104, 0);
+  }
+    100% {
+    transform: scale(0.95) translateX(-50%);
+    box-shadow: 0 0 0 0 rgba(87, 173, 104, 0);
+  }
+}
+
+@keyframes appearFromLeft {
+  from {
+    transform: translateY(300px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  top {
+    opacity: 1;
+  }
+}
+
+
+
