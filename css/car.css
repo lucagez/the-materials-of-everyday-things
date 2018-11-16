@@ -4,8 +4,11 @@
           transform-style: preserve-3d;
           min-width: 100%;
           min-height: 100%;
-  /* border: 1px solid red; */
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
   transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
   cursor: pointer;
 }
 
@@ -20,16 +23,39 @@
   top: 50%;
   left: 50%;
   margin: -40em 0 0 -40em;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
   transition: transform 1s;
-  animation: rotate 10s linear infinite;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-animation: rotate 20s linear infinite;
+          animation: rotate 20s linear infinite;
+}
+
+/* .scene:hover {
+  transform: rotateY(90deg);
+  animation: none;
+} */
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  to {
+    -webkit-transform: rotateY(540deg);
+            transform: rotateY(540deg);
+  }
 }
 
 @keyframes rotate {
   from {
-    transform: rotateY(0deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
   }
   to {
-    transform: rotateY(360deg);
+    -webkit-transform: rotateY(540deg);
+            transform: rotateY(540deg);
   }
 }
 
@@ -857,7 +883,7 @@
   height:3em;
 }
 .wheel-3 .face {
-  background-color:#333;
+  background-color:rgb(63, 63, 63);
 }
 /* .wheel-2 styles */
 .wheel-2 {
@@ -885,7 +911,7 @@
   height:3em;
 }
 .wheel-2 .face {
-  background-color:#333;
+  background-color:rgb(63, 63, 63);
 }
 /* .wheel-4 styles */
 .wheel-4 {
@@ -913,7 +939,7 @@
   height:3em;
 }
 .wheel-4 .face {
-  background-color:#333;
+  background-color:rgb(63, 63, 63);
 }
 /* .wheel-1 styles */
 .wheel-1 {
@@ -941,7 +967,7 @@
   height:3em;
 }
 .wheel-1 .face {
-  background-color:#333;
+  background-color:rgb(63, 63, 63);
 }
 /* .rim-3 styles */
 .rim-3 {
@@ -1142,17 +1168,20 @@
 
 /* .engine styles */
 .engine {
-  transform:translate3D(0em, -2em, -6em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform:translate3D(0em, -2em, -6em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+          transform:translate3D(0em, -2em, -6em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
   width:4em;
   height:3em;
   margin:-1.5em 0 0 -2em;
 }
 .engine .ft {
-  transform:translateZ(1.5em);
+  -webkit-transform:translateZ(1.5em);
+          transform:translateZ(1.5em);
 }
 .engine .bk {
-  transform:translateZ(-1.5em) rotateY(180deg);
+  -webkit-transform:translateZ(-1.5em) rotateY(180deg);
+          transform:translateZ(-1.5em) rotateY(180deg);
 }
 .engine .rt, .engine .lt {
   width:3em;
