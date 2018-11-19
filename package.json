@@ -1,0 +1,10 @@
+{
+  "name": "The_Materials_of_Everyday_Things",
+  "author": "Luca Gesmundo",
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  },
+  "scripts": {
+    "start": "browser-sync -w ."
+  }
+}

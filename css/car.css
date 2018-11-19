@@ -32,11 +32,6 @@
           animation: rotate 20s linear infinite;
 }
 
-/* .scene:hover {
-  transform: rotateY(90deg);
-  animation: none;
-} */
-
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotateY(180deg);

@@ -1,4 +1,3 @@
-
 html,
 body {
   width: 100%;
@@ -19,7 +18,7 @@ button#deeper div {
   opacity: 1;
   text-transform: none;
   -webkit-animation: fadeIn 1.5s ease-in-out;
-          animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .title {
@@ -41,8 +40,8 @@ button#deeper div {
 .horizontalCenter {
   left: 50%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .title h1,
@@ -55,11 +54,11 @@ button#deeper div {
 .askGrid {
   display: -ms-grid;
   display: grid;
-      -ms-grid-columns: auto 740px auto;
-      grid-template-columns: auto 740px auto;
-      -ms-grid-rows: 150px 200px auto;
-      grid-template-rows: 150px 200px auto;
-      grid-template-areas:
+  -ms-grid-columns: auto minmax(150px, 740px) auto;
+  grid-template-columns: auto minmax(200px, 740px) auto;
+  -ms-grid-rows: 150px 200px auto;
+  grid-template-rows: 150px 200px auto;
+  grid-template-areas:
     ". . ."
     ". main ."
     ". . .";
@@ -79,7 +78,8 @@ button#deeper div {
   color: rgb(177, 177, 177);
 }
 
-.intro2 .content .first-letter, .firstViz .textContainer .content .first-letter {
+.intro2 .content .first-letter,
+.firstViz .textContainer .content .first-letter {
   color: rgba(226, 188, 188, 0.5);
 }
 
@@ -87,29 +87,29 @@ button#deeper div {
   display: -ms-grid;
   display: grid;
   background: #333;
-      -ms-grid-columns: auto 1fr 1fr auto;
-      grid-template-columns: auto 1fr 1fr auto;
-      -ms-grid-rows: 500px auto;
-      grid-template-rows: 500px auto;
-      grid-template-areas:
+  -ms-grid-columns: auto 1fr 1fr auto;
+  grid-template-columns: auto 1fr 1fr auto;
+  -ms-grid-rows: 500px auto;
+  grid-template-rows: 500px auto;
+  grid-template-areas:
     ". elements world ."
     ". data text .";
 }
 
-.firstViz > .textContainer {
+.firstViz>.textContainer {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: text;
   margin-top: 30px;
   max-width: 600px;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
-.firstViz > .textContainer p {
+.firstViz>.textContainer p {
   margin-top: 30px;
   font-size: 21px;
   color: rgb(177, 177, 177);
@@ -129,7 +129,7 @@ button#deeper div {
   grid-area: world;
   max-width: 960px;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 .svgWorld:hover {
@@ -139,10 +139,10 @@ button#deeper div {
 .svgWorld svg {
   display: block;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   max-width: 100%;
   height: auto;
   max-height: 500px;
@@ -161,7 +161,7 @@ button#deeper div {
   width: calc(100vw / 2 * 0.9);
   max-width: 900px;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 .chartContainer:hover {
@@ -219,7 +219,7 @@ button.elementContainer:focus {
 
 .askGrid {
   -ms-grid-rows: auto auto auto;
-      grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto;
 }
 
 .ask {
@@ -228,15 +228,15 @@ button.elementContainer:focus {
   grid-area: main;
   text-align: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 .introGrid {
   -ms-grid-rows: 400px auto auto;
-      grid-template-rows: 400px auto auto;
+  grid-template-rows: 400px auto auto;
 }
 
 .article {
@@ -246,6 +246,8 @@ button.elementContainer:focus {
 }
 
 .car {
+  border: 1px solid red;
+
   position: fixed;
   top: 30%;
   -webkit-perspective: 800px;
@@ -277,22 +279,22 @@ button.elementContainer:focus {
 
 .pulse {
   -webkit-animation: pulse 5.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-          animation: pulse 5.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  animation: pulse 5.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 }
 
 .pulse:hover {
   -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 
 .pulse:active {
   -webkit-animation: pulse 5.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-          animation: pulse 5.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  animation: pulse 5.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 }
 
 .shadow {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .radius {
@@ -306,7 +308,8 @@ button.elementContainer:focus {
   padding: 10px;
 }
 
-.label p, .label h2 {
+.label p,
+.label h2 {
   margin: 0;
   color: #fff;
 }
@@ -319,92 +322,94 @@ button.elementContainer:focus {
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
+
   to {
     -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
 @keyframes rotate {
   from {
     -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
+
   to {
     -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(0.95) translateX(-50%);
-            transform: scale(0.95) translateX(-50%);
+    transform: scale(0.95) translateX(-50%);
     -webkit-box-shadow: 0 0 0 0px rgba(87, 173, 104, 1);
-            box-shadow: 0 0 0 0px rgba(87, 173, 104, 1);
+    box-shadow: 0 0 0 0px rgba(87, 173, 104, 1);
   }
 
   70% {
     -webkit-transform: scale(1) translateX(-50%);
-            transform: scale(1) translateX(-50%);
+    transform: scale(1) translateX(-50%);
     -webkit-box-shadow: 20px 20px 0 0 rgba(87, 173, 104, 0);
-            box-shadow: 20px 20px 0 0 rgba(87, 173, 104, 0);
+    box-shadow: 20px 20px 0 0 rgba(87, 173, 104, 0);
   }
 
   100% {
     -webkit-transform: scale(0.95) translateX(-50%);
-            transform: scale(0.95) translateX(-50%);
+    transform: scale(0.95) translateX(-50%);
     -webkit-box-shadow: 0 0 0 0 rgba(87, 173, 104, 0);
-            box-shadow: 0 0 0 0 rgba(87, 173, 104, 0);
+    box-shadow: 0 0 0 0 rgba(87, 173, 104, 0);
   }
 }
 
 @keyframes pulse {
   0% {
     -webkit-transform: scale(0.95) translateX(-50%);
-            transform: scale(0.95) translateX(-50%);
+    transform: scale(0.95) translateX(-50%);
     -webkit-box-shadow: 0 0 0 0px rgba(87, 173, 104, 1);
-            box-shadow: 0 0 0 0px rgba(87, 173, 104, 1);
+    box-shadow: 0 0 0 0px rgba(87, 173, 104, 1);
   }
 
   70% {
     -webkit-transform: scale(1) translateX(-50%);
-            transform: scale(1) translateX(-50%);
+    transform: scale(1) translateX(-50%);
     -webkit-box-shadow: 20px 20px 0 0 rgba(87, 173, 104, 0);
-            box-shadow: 20px 20px 0 0 rgba(87, 173, 104, 0);
+    box-shadow: 20px 20px 0 0 rgba(87, 173, 104, 0);
   }
 
   100% {
     -webkit-transform: scale(0.95) translateX(-50%);
-            transform: scale(0.95) translateX(-50%);
+    transform: scale(0.95) translateX(-50%);
     -webkit-box-shadow: 0 0 0 0 rgba(87, 173, 104, 0);
-            box-shadow: 0 0 0 0 rgba(87, 173, 104, 0);
+    box-shadow: 0 0 0 0 rgba(87, 173, 104, 0);
   }
 }
 
 @-webkit-keyframes appearFromLeft {
   from {
     -webkit-transform: translateY(300px);
-            transform: translateY(300px);
+    transform: translateY(300px);
   }
 
   to {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes appearFromLeft {
   from {
     -webkit-transform: translateY(300px);
-            transform: translateY(300px);
+    transform: translateY(300px);
   }
 
   to {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -433,28 +438,57 @@ button.elementContainer:focus {
     grid-template-columns: repeat(auto-fit, 60px);
     grid-auto-rows: 60px;
   }
+
   button.elementContainer {
     height: 60px;
     width: 60px;
   }
+
   .elementContainer p {
     font-size: 8px;
   }
-  .firstViz > .textContainer {
+
+  .firstViz>.textContainer {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
     grid-area: text;
     margin-top: 30px;
     max-width: 400px;
     -ms-grid-column-align: center;
-        justify-self: center;
+    justify-self: center;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
-  .firstViz > .textContainer p {
+
+  .firstViz>.textContainer p {
     margin-top: 30px;
     font-size: 16px;
     color: rgb(177, 177, 177);
+  }
+
+  .car {
+    transform: scale(0.8);
+    transform-origin: -190%;
+    -webkit-transform: scale(0.8);
+    -webkit-transform-origin: -190%;
+    -ms-transform: scale(0.8);
+    -ms-transform-origin: -190%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  button#deeper div {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .car {
+    transform: scale(0.5);
+    transform-origin: -50%;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: -50%;
+    -ms-transform: scale(0.5);
+    -ms-transform-origin: -50%;
   }
 }
